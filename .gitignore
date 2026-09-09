@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+fit-check.zip 
+update_service.cjs
+
+.env
+.env.local
+.env.*.local
+sanitize.cjs
