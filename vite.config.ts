@@ -4,8 +4,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv( mode, '.', '' );
-    const apiKey = env.GEMINI_API_KEY || process.env.GEMINI_API_KEY || '';
-    const hfToken = env.HF_TOKEN || process.env.HF_TOKEN || '';
+    const apiKey = env.GEMINI_API_KEY || env.API_KEY || process.env.GEMINI_API_KEY || process.env.API_KEY || '';
     return {
       server: {
         port: 3000,
@@ -14,8 +13,7 @@ export default defineConfig(({ mode }) => {
       plugins: [react()],
       define: {
         'process.env.API_KEY': JSON.stringify(apiKey),
-        'process.env.GEMINI_API_KEY': JSON.stringify(apiKey),
-        'process.env.HF_TOKEN': JSON.stringify(hfToken)
+        'process.env.GEMINI_API_KEY': JSON.stringify(apiKey)
       },
       resolve: {
         alias: {

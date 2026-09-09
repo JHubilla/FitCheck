@@ -30,3 +30,5 @@ update_service.cjs
 .env.*.local
 sanitize.cjs
 refine_ui.cjs
+apply_fixes.cjs
+restore_gemini.cjs
