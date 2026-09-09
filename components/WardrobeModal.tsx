@@ -70,7 +70,7 @@ const WardrobePanel: React.FC<WardrobePanelProps> = ({ onGarmentSelect, activeGa
         if (e.target.files && e.target.files[0]) {
             const file = e.target.files[0];
             if (!file.type.startsWith('image/')) {
-                setError('Please select an image file.');
+                setError('Por favor, selecione um arquivo de imagem.');
                 return;
             }
             const customGarmentInfo: WardrobeItem = {
@@ -84,7 +84,7 @@ const WardrobePanel: React.FC<WardrobePanelProps> = ({ onGarmentSelect, activeGa
 
   return (
     <div className="pt-6 border-t border-gray-400/50">
-        <h2 className="text-xl font-serif tracking-wider text-gray-800 mb-3">Wardrobe</h2>
+        <h2 className="text-xl font-serif tracking-wider text-gray-800 mb-3">Guarda-Roupa</h2>
         <div className="grid grid-cols-3 gap-3">
             {wardrobe.map((item) => {
             const isActive = activeGarmentIds.includes(item.id);
@@ -110,12 +110,12 @@ const WardrobePanel: React.FC<WardrobePanelProps> = ({ onGarmentSelect, activeGa
             })}
             <label htmlFor="custom-garment-upload" className={`relative aspect-square border-2 border-dashed rounded-lg flex flex-col items-center justify-center text-gray-500 transition-colors ${isLoading ? 'cursor-not-allowed bg-gray-100' : 'hover:border-gray-400 hover:text-gray-600 cursor-pointer'}`}>
                 <UploadCloudIcon className="w-6 h-6 mb-1"/>
-                <span className="text-xs text-center">Upload</span>
+                <span className="text-xs text-center">Enviar Peça</span>
                 <input id="custom-garment-upload" type="file" className="hidden" accept="image/png, image/jpeg, image/webp, image/avif, image/heic, image/heif" onChange={handleFileChange} disabled={isLoading}/>
             </label>
         </div>
         {wardrobe.length === 0 && (
-             <p className="text-center text-sm text-gray-500 mt-4">Your uploaded garments will appear here.</p>
+             <p className="text-center text-sm text-gray-500 mt-4">Suas peças enviadas aparecerão aqui.</p>
         )}
         {error && <p className="text-red-500 text-sm mt-4">{error}</p>}
     </div>

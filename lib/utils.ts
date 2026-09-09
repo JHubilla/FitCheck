@@ -10,7 +10,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getFriendlyErrorMessage(error: unknown, context: string): string {
-    let rawMessage = 'An unknown error occurred.';
+    let rawMessage = 'Ocorreu um erro inesperado.';
     if (error instanceof Error) {
         rawMessage = error.message;
     } else if (typeof error === 'string') {
@@ -33,7 +33,7 @@ export function getFriendlyErrorMessage(error: unknown, context: string): string
             // Not a JSON string, but contains the text. Fallthrough to generic message.
         }
         // Generic fallback for any "Unsupported MIME type" error
-        return `Unsupported file format. Please upload an image format like PNG, JPEG, or WEBP.`;
+        return `Unsupported file format. Use PNG, JPEG ou WEBP.`;
     }
     
     return `${context}. ${rawMessage}`;

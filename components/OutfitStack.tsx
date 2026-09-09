@@ -15,7 +15,7 @@ interface OutfitStackProps {
 const OutfitStack: React.FC<OutfitStackProps> = ({ outfitHistory, onRemoveLastGarment }) => {
   return (
     <div className="flex flex-col">
-      <h2 className="text-xl font-serif tracking-wider text-gray-800 border-b border-gray-400/50 pb-2 mb-3">Outfit Stack</h2>
+      <h2 className="text-xl font-serif tracking-wider text-gray-800 border-b border-gray-400/50 pb-2 mb-3">Camadas do Look</h2>
       <div className="space-y-2">
         {outfitHistory.map((layer, index) => (
           <div
@@ -30,7 +30,7 @@ const OutfitStack: React.FC<OutfitStackProps> = ({ outfitHistory, onRemoveLastGa
                     <img src={layer.garment.url} alt={layer.garment.name} className="flex-shrink-0 w-12 h-12 object-cover rounded-md mr-3" />
                 )}
                 <span className="font-semibold text-gray-800 truncate" title={layer.garment?.name}>
-                  {layer.garment ? layer.garment.name : 'Base Model'}
+                  {layer.garment ? layer.garment.name : 'Modelo Base'}
                 </span>
             </div>
             {index > 0 && index === outfitHistory.length - 1 && (
@@ -45,7 +45,7 @@ const OutfitStack: React.FC<OutfitStackProps> = ({ outfitHistory, onRemoveLastGa
           </div>
         ))}
         {outfitHistory.length === 1 && (
-            <p className="text-center text-sm text-gray-500 pt-4">Your stacked items will appear here. Select an item from the wardrobe below.</p>
+            <p className="text-center text-sm text-gray-500 pt-4">As peças do seu look aparecerão aqui. Selecione uma peça no guarda-roupa abaixo.</p>
         )}
       </div>
     </div>

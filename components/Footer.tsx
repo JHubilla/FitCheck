@@ -6,12 +6,12 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const REMIX_SUGGESTIONS = [
-  "Remix idea: Generate a shareable lookbook.",
-  "Remix idea: Integrate an e-commerce API to find similar items.",
-  "Remix idea: Add accessories like hats, sunglasses, or bags.",
-  "Remix idea: Create a 'style score' for outfits.",
-  "Remix idea: Let users save their favorite outfits.",
-  "Remix idea: Generate different colorways for garments.",
+  "Dica: Gere um catálogo para compartilhar seus estilos.",
+  "Dica: Experimente novas peças e roupas combinadas.",
+  "Dica: Adicione acessórios como chapéus, óculos ou bolsas.",
+  "Dica: Crie uma pontuação de estilo para cada look.",
+  "Dica: Salve seus looks favoritos no seu dispositivo.",
+  "Dica: Experimente diferentes combinações de cores para as roupas.",
 ];
 
 interface FooterProps {
