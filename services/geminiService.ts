@@ -58,7 +58,7 @@ export const generateVirtualTryOnImage = async (modelImageUrl: string, garmentIm
       garm_img: garmentImage,
       garment_des: "clothing garment",
       is_checked: true,
-      is_checked_crop: false,
+      is_checked_crop: true,
       denoise_steps: 30,
       seed: 42
     });
